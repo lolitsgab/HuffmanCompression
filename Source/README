@@ -1,0 +1,28 @@
+Gabriel Garcia
+gargarci@ucsc.edu
+Partnert: Kyle Van Eenennaam
+kvaneene@ucsc.edu
+
+********Design for decode**************
+
+I was in charge of decode and Huffman. I also helped debug Kyle's encode.
+
+The file can be ran with various flags: -i (input file), -o (output file), and -v (verbose mode).
+
+The first 4 bytes must correspond with the binary represantaion of 0xdeadd00d. We call this a magic number to know if the file has been compressed before.
+
+The following 2 bytes contain the size of the file, while the following 4 contain the length of the tree. The number of bytes that length of tree says is the lenth of the huffman tree, which serves as a table to see how to decompress the files.
+
+The rest of the bits are "keys" or "codes" that will let us know how to walk the huffman tree to get to the correct letter which we need to decode.
+
+The entire encoding system is based off of binary huffman tree's, and uses a priority queue to construct said trees.
+
+*********My  Contribution************
+I wrote Huffman and decode. I was in charge of making the Stack structures and making sure everything else was in working order (including cross-compatibility with Darrell's and our program's input/output/encode/decode.
+
+
+
+*********Partner's Contribution************
+Kyle was resonsible for encode, which included queue, and the buildcode part of huffman. Finished on a timely manner. 10/10
+
+
